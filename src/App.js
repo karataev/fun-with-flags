@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
-import CountryCard from "./CountryCard";
-import countries from './data/countries';
+import G20Page from './pages/G20Page';
+import EuropePage from "./pages/EuropePage";
 
 const Root = styled.div`
 padding: 10px;
@@ -13,15 +14,16 @@ class App extends Component {
   render() {
 
     return (
-      <Root>
-        <h1>Большая двадцатка</h1>
-        {countries.map(country => (
-          <CountryCard
-            key={country.code}
-            country={country}
-          />
-        ))}
-      </Root>
+      <Router>
+        <Root>
+          <ul>
+            <li><Link to="g20">Большая двадцатка</Link></li>
+            <li><Link to="europe">Европейские страны</Link></li>
+          </ul>
+          <Route path="/g20" component={G20Page} />
+          <Route path="/europe" component={EuropePage} />
+        </Root>
+      </Router>
     );
   }
 }
