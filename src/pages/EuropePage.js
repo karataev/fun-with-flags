@@ -10,7 +10,7 @@ export default class EuropePage extends React.Component {
   render() {
     return (
       <div>
-        <h3>Европейские страны. Всего: {europeCountries.length}</h3>
+        <h3>Европа. {europeCountries.length}</h3>
         <CountryList countries={europeCountries}/>
       </div>
 
