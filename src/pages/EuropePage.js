@@ -1,27 +1,17 @@
 import React from 'react';
+import allCountries from 'world-countries/countries';
 
-import {
-  westEurope,
-  eastEurope,
-  northEurope,
-  southEurope,
-} from "../data/countries";
 import CountryList from "../CountryList";
+
+const europeCountries = allCountries.filter(country => country.region === 'Europe');
 
 export default class EuropePage extends React.Component {
 
   render() {
     return (
       <div>
-        <h3>Европейские страны</h3>
-        <h4>Западная Европа</h4>
-        <CountryList countries={westEurope}/>
-        <h4>Восточная Европа</h4>
-        <CountryList countries={eastEurope}/>
-        <h4>Северная Европа</h4>
-        <CountryList countries={northEurope}/>
-        <h4>Южная Европа</h4>
-        <CountryList countries={southEurope}/>
+        <h3>Европейские страны. Всего: {europeCountries.length}</h3>
+        <CountryList countries={europeCountries}/>
       </div>
 
     )

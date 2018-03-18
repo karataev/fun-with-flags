@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Flag from 'react-world-flags';
 import styled from 'styled-components';
+import flags from "./data/flags";
 
 const Root = styled.div`
 border: 1px solid #666;
@@ -23,8 +23,8 @@ export default class CountryCard extends React.Component {
 
     return (
       <Root>
-        <Flag code={country.code} width="128" />
-        <div>{country.title}</div>
+        <img src={flags[`flag_${country.cca2}`]} width={100} alt=""/>
+        <div>{country.name.common}</div>
       </Root>
     )
   }
