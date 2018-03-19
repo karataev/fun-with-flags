@@ -1,9 +1,7 @@
 import React from 'react';
-import allCountries from 'world-countries/countries';
 
+import {europeCountries} from '../data/countries';
 import CountryList from "../CountryList";
-
-const europeCountries = allCountries.filter(country => country.region === 'Europe');
 
 export default class EuropePage extends React.Component {
 

@@ -1,17 +1,15 @@
 import React from 'react';
-import allCountries from 'world-countries/countries';
 
 import CountryList from "../CountryList";
-
-const countries = allCountries.filter(country => country.region === 'Oceania');
+import {oceaniaCountries} from "../data/countries";
 
 export default class OceaniaPage extends React.Component {
 
   render() {
     return (
       <div>
-        <h3>Океания. {countries.length}</h3>
-        <CountryList countries={countries}/>
+        <h3>Океания. {oceaniaCountries.length}</h3>
+        <CountryList countries={oceaniaCountries}/>
       </div>
 
     )

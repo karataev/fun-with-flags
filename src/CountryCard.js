@@ -23,8 +23,8 @@ export default class CountryCard extends React.Component {
 
     return (
       <Root>
-        <img src={flags[`flag_${country.cca2}`]} width={100} alt=""/>
-        <div>{country.name.common}</div>
+        <img src={flags[`flag_${country.code}`]} width={100} alt=""/>
+        <div>{country.name} {country.code}</div>
       </Root>
     )
   }
