@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {europeCountries} from '../data/countries';
-import CountryList from "../CountryList";
+import CountryList from "../components/CountryList";
 
 export default class EuropePage extends React.Component {
 

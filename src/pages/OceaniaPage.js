@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CountryList from "../CountryList";
+import CountryList from "../components/CountryList";
 import {oceaniaCountries} from "../data/countries";
 
 export default class OceaniaPage extends React.Component {
