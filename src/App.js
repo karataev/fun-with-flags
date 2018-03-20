@@ -8,7 +8,7 @@ import AsiaPage from "./pages/AsiaPage";
 import AmericaPage from "./pages/AmericaPage";
 import AfricaPage from "./pages/AfricaPage";
 import OceaniaPage from "./pages/OceaniaPage";
-import EuropaQuizPage from "./quiz/EuropaQuizPage";
+import QuizPage from "./quiz/QuizPage";
 
 const Root = styled.div`
 padding: 10px;
@@ -28,7 +28,7 @@ class App extends Component {
             <li><Link to="america">Америка</Link></li>
             <li><Link to="africa">Африка</Link></li>
             <li><Link to="oceania">Океания</Link></li>
-            <li><Link to="europa-quiz">Европа. Тест</Link></li>
+            <li><Link to="quiz">Тесты</Link></li>
           </ul>
           <Route path="/all-countries" component={AllCountriesPage} />
           <Route path="/europe" component={EuropePage} />
@@ -36,7 +36,7 @@ class App extends Component {
           <Route path="/america" component={AmericaPage} />
           <Route path="/africa" component={AfricaPage} />
           <Route path="/oceania" component={OceaniaPage} />
-          <Route path="/europa-quiz" component={EuropaQuizPage} />
+          <Route path="/quiz" component={QuizPage} />
         </Root>
       </Router>
     );

@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {europeCountries} from "../data/countries";
 import CountryQuizCard from "./CountryQuizCard";
 import logic from './quizLogic';
 
 
-export default class EuropaQuizPage extends React.Component {
+export default class QuizGameplay extends React.Component {
+
+  static propTypes = {
+    onFinish: PropTypes.func.isRequired,
+  };
 
   constructor(props) {
     super(props);
@@ -42,6 +47,9 @@ export default class EuropaQuizPage extends React.Component {
             />
           ))}
         </div>
+        <button
+          onClick={this.props.onFinish}
+        >Закончить</button>
       </div>
     )
   }

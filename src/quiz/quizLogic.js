@@ -1,6 +1,7 @@
 
 let countries;
 let currentCountry;
+let maxLimit = 10;
 
 function getNextCountry() {
   let freeCountries = countries.filter(country => !country.done);
@@ -15,7 +16,7 @@ function haveFreeCountry() {
 
 function start(dataCountries) {
   countries = dataCountries
-    .slice(0, 10)
+    .slice(0, maxLimit)
     .map(country => {
       return {
         ...country,
@@ -44,4 +45,5 @@ export default {
   getCountries: () => countries,
   getCurrentCountry: () => currentCountry,
   select,
+  setMaxLimit: value => maxLimit = value,
 }
